@@ -1,0 +1,107 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+ 
+ =============================
+Testing createStudentRecord()
+Create student test succeeded.
+=============================
+deallocating record
+deallocation did not fail horribly.
+=============================
+Testing displayStudentRecord()
+1. Testing call with hard coded data
++++++++++++++++++++++++++++++++++++++++++++++++
+First Name: FIRSTNAME
+Last Name: LASTNAME
+Student Number: 12345678
+NSID: abc123
+Student grade: 0 = 10
+Student grade: 1 = 20
+Student grade: 2 = 30
+Student grade: 3 = 40
+Student grade: 4 = 50
+Student grade: 5 = 60
+Student grade: 6 = 70
+Student grade: 7 = 80
+Student grade: 8 = 90
+Student grade: 9 = 100
+Midterm exam grade: 66
+Final exam grade: 88
++++++++++++++++++++++++++++++++++++++++++++++++
+does everything look right?
+=============================
+To test readStudentRecordFromConsole()
+enter data for a student
+First Name: Max
+Last Name: gewers
+Student Number: 123456789
+NSID: mag910
+Student grade 0: 100
+Student grade 1: 100
+Student grade 2: 100
+Student grade 3: 99 
+Student grade 4: 88
+Student grade 5: 99
+Student grade 6: 88
+Student grade 7: 77
+Student grade 8: 100
+Student grade 9: 99
+Midterm exam grade: 100
+Final exam grade: 100
+Now compare to what gets displayed.
++++++++++++++++++++++++++++++++++++++++++++++++
+First Name: Max
+Last Name: gewers
+Student Number: 123456789
+NSID: mag910
+Student grade: 0 = 100
+Student grade: 1 = 100
+Student grade: 2 = 100
+Student grade: 3 = 99
+Student grade: 4 = 88
+Student grade: 5 = 99
+Student grade: 6 = 88
+Student grade: 7 = 77
+Student grade: 8 = 100
+Student grade: 9 = 99
+Midterm exam grade: 100
+Final exam grade: 100
++++++++++++++++++++++++++++++++++++++++++++++++
+does everything look right?
+=============================
+Testing changeAssignmentGradeForStudent()
+1. Testing call with hard coded data
+testing changes to assignment grade at index 0
+test passed
+testing changes to assignment grade at index 1
+test passed
+testing changes to assignment grade at index 2
+test passed
+testing changes to assignment grade at index 3
+test passed
+testing changes to assignment grade at index 4
+test passed
+testing changes to assignment grade at index 5
+test passed
+testing changes to assignment grade at index 6
+test passed
+testing changes to assignment grade at index 7
+test passed
+testing changes to assignment grade at index 8
+test passed
+testing changes to assignment grade at index 9
+test passed
+=============================
+Testing changeExamGradeForStudent()
+1. Testing with hard coded data
+testing changes to midterm grade
+test passed
+testing changes to final exam grade
+test passed
+testing nonsense command 
+test passed
+Done testing!

@@ -1,0 +1,8 @@
+Please note that I have not included the changes in a5q1
+
+For reference, from the assignment itself : 
+"Note: You do not have to make the changes mentioned in Exercise 1 of this assignment.
+As a reminder, we’ll repeat the requirements from A4."
+
+Reason being that there was no grading done for these parts.
+same with a5q4 there was no function in the pseudo code that was calling it and no instructions to add it.

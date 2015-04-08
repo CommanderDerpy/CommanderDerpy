@@ -1,0 +1,28 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+ 
+ 
+1)
+_ = 5
+A = 2
+B = 1
+E = 7
+H = 4
+L = 4
+O = 1
+R = 1
+S = 8
+T = 1
+Y = 1
+
+2) and 3) 
+See picture attached
+Name.jpg
+
+4 )
+It would look like any other Huffman tree. I would imagine that all the vowels would be at the top no matter what, because they are the letters used in the English language. after that it is very difficult to say. We would have to measure which words we use the most as assign them a frequency and create a Huffman tree with these to really tell. The problem with that is that everybody speaks English differently. Everybody uses different words at different frequencies. Which would mean after the vowels ( which would most likely be the same for each person Huffman tree ) every teller would be at a different location up to a limit.
+The advantage would be that we do not have to create new trees for each new message. Meaning we would have one universal tree which would cut processing down (may not or not noticeably and we could find way and build programs around this tree. Disadvantages would be like I said before. The way some people talk, some people would end up with larger sets of binary codes for the exact same way of saying something.

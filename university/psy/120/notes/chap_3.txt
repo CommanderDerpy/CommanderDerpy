@@ -1,0 +1,101 @@
+#Genes, Evolution and Environments
+
+There are some differences
+    2 to be exact
+
+    - Nativists : emphasized genes and inborn characteristics (nature)
+    - Empiricists : Focus on learning and experiences (nurture)
+
+- Genes give the basic guidelines for our DNA and are located within our chromosome (23 pairs)
+- Within Genes there are 4 chemical elements
+    + Adenine (A)
+    + Cytosine (C)
+    + Thymine (T)
+    + Guanine (G)
+- Genome is a full set of genes in each cell
+- Linking studies
+    + Looks at patterns of  inheritance of genetic markers in large families in which a particular trait is common
+        * Genetic Markers - Segment of DNA that varies among individuals, was known location on a chromosome, and can function as a genetic 
+        marker for a gene
+- We can not link genes on a chromosome to a specific trait of behavior - pairs of genes pairs are responsible for that
+- *Evolution* is a change in gene frequencies within a population over many generations
+    + mutation
+- Natural selection (Darwin)  ( I know all of this so I am not going to write too much about it )
+    + Sexual selection played a role within Natural Selection 
+        * Inter-sexual - one member chooses its partner
+        * Intra-sexual - competition over a mate
+
+##Traits and Preferences
+- Evolutionary Biologist
+    + Start with observing characteristics and do and describe things in evolutionary terms
+- Evolutionary Psychologist
+    + focuses on the psychophysical changes of the generations and what behavioral tendencies may have been selected to overcome these challenges
+
+- Mental Modules - A perspective is that the mind reflects mental modules shaped though evolution
+    + Mental Modules - brain is sectioned into different parts of the brain to account for certain traits (location of food, find a mate, etc)
+
+- Innate Human Characteristics - Evolution has shaped this 
+    + Infant reflexes
+    + An Interest in novelty (**the quality of being new, original, or unusual.**)
+    + A desire to explore and manipulate objects
+    + in impulse to play and fool around
+    + Basic cognitive skills (**the mental action or process of acquiring knowledge and understanding through thought, experience, and the senses.**)
+- Language is a Human Heritage (combines meaningless elements such as sounds and gestures giving it structure and meaning)
+- We have a Innate capacity for Language (we learn language very early on AND show signs of this trait shortly after birth [shortly is relative ((7 months )) ] ) 
+- Other argue that the environments plays a large role in the development of language
+    + Like computers can learn some aspect of language (slides don't talk about the philosophical and technical limits [does not really learn])
+
+## Our Human Heritage: Courtship and Mating
+
+- Sociobiology
+    + Interdisciplinary field that emphasizes evolutionary explanation of social behavior in animals and humans
+    + We usually act upon maximizing the chance to pass our genes as well as helping close biological relatives do the same
+    + Slide 19 which is weird .. will not cover it (should not be on test)
+    + Cross-cultural studies have shown consistent differences between male and female
+        * Mating pref, age predict status and dominance in men and fertility in female
+- Criticisms of evolutionary explanation of sex differences
+    + Stereotype vs actual behavior
+    + Convince vs representative sample
+    + What people say vs what they do
+    + Fred Flintstones problem (maybe look up or search book for this)
+- The Genetics of Differences 
+    + a statistical estimate of the proportion of the total variances in some traits that is attributable to genetic differences among individuals within a group
+    + Expressed as proportion .60 or 60/100 within a max value of 1.0
+    + High Heritability means greater genetic contribution to trait
+
+- Facts about Heritability
+- only applies to a certain group of people in a certain area
+- no individuals only groups
+- even high irritability can be modified by the environment
+
+- IQ (intelligence quotient)
+- derived from norms of standardized IQ test
+- Children and adolescents (0.40 -0.50), Adult (0.60 - .080)
+
+- Group Differences (Tomato plant example( cloned ) . Same seed but different environment)
+    + Environment can effect the way you grow up
+    + turning on and or off genes when needed
+- evince in humans with such effect
+- Reduced
+    + Poor prenatal care
+    + Malnutrition
+    + Exposure to Toxins
+    + Stressful family circumstances
+- Improved or enhanced
+    + Good Health and nutrition
+    + Mental enrichment in home, child care and school
+    + Parental interaction, discussions and encouragement of mental processing
+- Genes and environment interact 
+- IQ average has been rising over the past decades. (developED countries)
+- Effect seen in developing countries as well
+
+##Beyond Nature vs Nurture
+- Gene and environment interaction is very complex
+- New tech has raised new questions
+    + What is a gene
+        * Can be fragmented or intertwined with other genes
+    + DNA can be found outside of genes (junk DNA)
+        * Maybe part of mutations
+    + G and E interaction makes the unique mixture of quality that make a human
+    + Epigenetics
+        * A new area studing changes in genes expression due to mechanism other than structural changes in the DNA

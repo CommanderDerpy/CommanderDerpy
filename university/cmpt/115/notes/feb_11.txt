@@ -1,0 +1,76 @@
+List
+Inserting into a list 
+
+Inserting at the beginning
+    
+HEAD -> [][] -> [][] -> [][] -> [][] 
+insert after head ()()
+Head -> ()() -> [][] -> [][] -> [][] 
+
+//Pre: rList :: refToList
+    el :: element to me inserted.
+//Post: el is not in the list
+//Return
+<script type="c++">
+ alg InsertHead(rList, el) {
+    NewNode <- New node
+    (*NewNode).data <- el
+   
+   (*NewNode).next <- rList
+
+    return(NewNode); //gets returned and assigned to the head
+ }
+    New node dispears but the value does not because it is heap memeory.
+</script>
+
+Insert at Tail
+////Pre: refToNode :: Head
+    el: to be inserted / data
+//Post: element is inserted into the list
+//Return: 
+<script type="c++">
+alg insertTal(head,el) {
+    //basecase
+    if head == NULL {
+        newNode <- allocate new node
+        (*newNode).el <- data
+        (*newNode).next <- NULL
+        Return (newNode)
+    }
+    (*head).next <- insertTal(*head).next
+    return(head)
+}
+</script>
+//This is a little more confusing but makes sense.
+
+
+Delete at head
+delete(head, el) {
+    Base 1
+    if (head == null) {
+      return NULL
+    }
+    if (*head).data == el) {
+        temp <- *head.next
+        deallocate head
+     return(temp)
+    } else  //recursive case
+        *head.next <- deleteList(*head.next, el)
+        return (head)
+    }
+}
+
+in main
+
+head <- deleteList(head,7)
+    HAND TRACE
+O -> [5][] -> [2][] -> [18][]
+        head 1st call
+                    head 2nd call
+                                    head 3rd call
+                                                head = null so return null (el does not exist)
+Las call
+return 18
+return 2
+return 5
+nothing is changed

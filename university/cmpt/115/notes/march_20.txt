@@ -1,0 +1,7 @@
+In the constructor 
+- the allocation of memory occurs first 
+- then whatever I have written
+De-instructor works other way around
+- deletes whatever I have allocated
+- then the memory
+

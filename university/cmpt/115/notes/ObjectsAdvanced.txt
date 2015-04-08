@@ -1,0 +1,25 @@
+============
+-------------------------
+Person Object
+-------------------------
+name :
+Address : 
+phone :
+-------------------------
+getName()
+getAddress()
+getPhone()
+============
+
+^ ( is-a) - means the object bellow is also of class/object above
+
+============
+--------------------------
+Student
+--------------------------
+NSID:
+Student Number:
+--------------------------
+getNSID()
+getStudentNumber()
+============

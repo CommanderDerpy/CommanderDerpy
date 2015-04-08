@@ -1,0 +1,41 @@
+Tree ATD
+
+- Arrays, linked lists, stacks, queues - are all linear structures
+- Trees allow data to be organized hierarchically
+- A tree contains nodes which are connected by arcs
+- Each node has one parent, and zero or more children
+- A node is connected to its children by arcs
+- One node, the root node, has no parent.
+ 
+
+O = ROOT = Has no parent
+O = LEAF = Has no child
+O = data
+--- = Arc or parent
+Levels = level at which data is represented at
+
+O ---- O
+
+O = Parent
+|
+|
+O = Child
+
+O --- O Siblings
+
+if the root contains NULL the tree is empty
+
+Level of the tree is each element
+Level is the length of the path
+O 0
+O 1
+O 2
+etc
+
+height is measured in branches or arcs
+O height = 0
+| height + 1
+O height = 1
+| height + 1
+O height = 2 
+

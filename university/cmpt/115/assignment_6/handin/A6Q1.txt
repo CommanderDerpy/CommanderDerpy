@@ -1,0 +1,57 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+
+//Comments in the code are for me to see where I have made changes. I hope that is acceptable.
+
+mAlgorithm createList() //changed to have no parameters
+Create a new list.
+Pre: size :: the capacity of the array
+Returns: a reference to a newly allocated list that is initialized 
+to be empty.
+
+  refToList rNewList <- allocate new List
+  rList*=>capacity <- 1 //changed to 1
+  rList*=>tail <- -1
+  rList*=>numElements <- 0
+  rList*=>elements <- allocate new Element[1]
+  return rNewList
+
+
+Algorithm InsertTail(rList, el)
+Pre: rList :: a reference to a list into which to insert
+     el :: an Element
+Post: el is inserted into the list
+Return: true if successful, false otherwise
+
+  if ( rList*=>numElements == rList*=>capacity )
+    rList = growList(rList, el) //calls growList to increase capacity
+    rList*=>elements[numElements] <- el
+    rList*=>numElements <- rList*=>numElements + 1
+    rList*=>tail <- rList*=>tail + 1
+  else
+    // put the new element in the position indexed by numElements
+    rList*=>elements[numElements] <- el
+    rList*=>numElements <- rList*=>numElements + 1
+    rList*=>tail <- rList*=>tail + 1
+  end if
+  return true
+
+
+  Algorithm growList(rList)
+Pre: rList :: a reference to a list into which to insert
+     el :: an Element
+Post: Array size is increased by 1 and insertTail is called
+return: True if successful , false otherwise
+
+NewList = createList() //New List is created
+NewList*=>capacity = rList*=>capacity + 1 //changed the size of the list
+for 0 from NewList*=>capacity -1
+     NewList*=>numElement[c] = rList=>numElement[c]  //copy all existing elements over besides the new empty one
+end for
+return NewList
+
+DELETE THE OLD!!

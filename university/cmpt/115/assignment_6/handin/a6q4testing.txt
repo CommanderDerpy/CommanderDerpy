@@ -1,0 +1,37 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+ 
+car
+cat
+racecar
+dog
+civic
+abba
+last
+noon
+level
+strange
+Number of worlds are : 10
+Is a palindrome : racecar
+Is a palindrome : civic
+Is a palindrome : abba
+Is a palindrome : noon
+Is a palindrome : level
+deleted c
+deleted c
+deleted r
+deleted d
+deleted c
+deleted a
+deleted l
+deleted n
+deleted l
+deleted s
+
+
+
+We are done here!!!

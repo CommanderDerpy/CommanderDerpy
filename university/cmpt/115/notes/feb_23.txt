@@ -1,0 +1,41 @@
+star => mean dereference the variable and access its component 
+equal to 
+(*rNewStack).top <- NULL
+
+Stack memory = cafeteria tray
+Last in first out
+LIFO 
+---------------------------------------------------------
+stacks are being used when something is being called
+
+    How is ti being called? Last in first out
+    
+    in the main program
+    b <- something(a)
+
+
+post fix in notes
+
+==================================================================
+
+Recursion Revisited
+
+every time we have loop in a function we can use Recursion
+
+5! = 5 * 4 * 3 * 2 * 1
+4! = 4 * 3 * 2 * 1
+6 = 5 * 4!
+etc...
+
+
+Find the largest in the array recursively.
+<script type="c++">
+int Largest(int array,int size) { 
+    if array == 0 then error;
+
+    if array[0] then return it because it is the only element left
+    if not array[0] call largest with array (array,size-1)
+        then compare the two and return the larger
+
+}
+</script>

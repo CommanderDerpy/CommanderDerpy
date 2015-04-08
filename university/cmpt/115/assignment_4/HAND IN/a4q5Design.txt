@@ -1,0 +1,43 @@
+/* 
+* Maximilian Gewers 
+* 11163599
+* CMPT - 115 - 02
+* CMPT - 115 - T08
+
+struct of student
+	refToChar name
+	int score
+end struct
+
+*///algorithm : getData
+//Pre: Student refToarrStu :: array of pointers to student struct
+//	aSize :: intenger of size of array
+//Post: recives data from the user/text feed to fill the array of ref
+//Return: Nothing
+	buffer[50]
+	for c from 0 to aSize
+		allocate arrStu[c] of Student
+		user input to buffer
+		arrStu[c]->name <- strdub(buffer);
+		user input to arrStu[c]->score
+	end for
+end of function
+
+//algorithm : ptrData
+//Pre: Student refToarrStu :: array of pointers to student struct
+//	aSize :: intenger of size of array
+//Post: prints a certain pointer
+//Return: Nothing
+print arrStu[iS]->name 
+print arrSti[oS]->score
+end of function
+
+Main
+	aSize <- 0
+	user input aSize
+	create a ref of student strcut of an array
+
+	call getData(arrStu,aSize)
+	call PtrData(arrStu,aSize)
+
+end of main

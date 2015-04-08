@@ -1,0 +1,132 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+
+Student
+refToChar firstName
+refToChar lastName
+int studentNum
+refToChar NSID
+int grades[10]
+int midterm
+int final
+endRecord
+
+
+HEADER
+	Algorithm createStudentRecord()
+	//Pre: none
+	//Post: none
+	//Return: refToStudent, a valid reference to a record of type Student
+START OF FUNCTION
+	Student RefToNewStudent <- new Student
+	return NewStudent
+END OF FUNCTION
+
+HEADER
+	Algorithm readStudentRecordFromConsole() 
+	//Pre: none
+	//Post: none
+	//Return: refToStudent, a valid reference to a record of type Student
+START FUNCTION
+	Student RefToNewStudent <- call createStudentRecord()
+	
+char buffer[50]
+
+	Ask user for name for new student
+	cin <- input
+	NewStudent->firstName = strdup(buffer)
+
+	Ask user for lastname for new student
+	cin <- input
+	NewStudent->lastName = strdup(buffer)
+
+	Ask user for name for new GPA
+	cin <- NewStudent->GPA
+	
+	Ask user for student number
+	cin <- NewStudent->StudentNum 
+	
+	ask user for NSID in the format of ABC (SPACE) 123
+	cin <- NewStudent->NSID
+	
+	for c from 0 to 10
+		NewStudent->grades[c] <- 0
+	endFor
+	
+	NewStudent->midterm <- 0
+	NewStudent->final <- 0
+	Return NewStudent <- 0
+END FUNCTION
+
+HEADER
+	Algorithm destroyStudentRecord(s)
+	//Pre: s::refToStudent
+	//Post: s (and all associated memory) has been deallocated
+	//Return: none
+START FUNCTION3
+
+	if s equals NULL then return 	
+	end if
+	if s->firstName does not equal NULL dealocate s->firstName
+	enf if
+	if s->lastName does not equal NULL dealicate s->lastName
+	end if
+	if s->studentNum does not euqal NULL dealicate s->studentNum
+	if s->NSID does not euqal NULL dealicate s->NSIDL
+	if s->grades[10] does not euqal NULL dealicate s->grades[10]
+	if s->midterm does not euqal NULL dealicate s->midterm 
+	if s->final does not euqal NULL dealicate s-final
+	dealocate s
+END OF FUNCTION
+
+
+
+HEADER
+	Algorithm displayStudentRecord(s)
+	//Pre: s::refToStudent
+	//Post: the information for student s has been printed
+	//return: none
+START FUNCTION3
+	if s equals NULL
+		print invalid Student Record (does not exist)
+		return
+	end if
+	print s->firstName
+	print s->lastName
+	print s->studentNum
+	print s->NSID
+	print s->grades[10]
+	print s->midterm
+	print s->final
+END OF FUNCTION
+
+
+HEADER
+	Algorithm changeAssignmentGradeForStudent(s,a,s)
+	//Pre: s::refToStudent
+	g:: grade as int (%%)
+	a:: Asignment number (in array)	
+	//Post: change the grade of one assignment
+	//return: none
+START FUNCTION3
+	s->grades[a-1] <- g
+END OF FUNCTION
+
+
+	Algorithm changeExamGradeForStudent(s,x,e)
+	//Pre: s::refToStudent
+		e:: grade as int (%%)
+		x:: if its either M for midterm or F for Final
+	//Post: change the grade of one assignment
+	//return: none
+	START FUNCTION3
+	if M then
+		s->midterm <- e
+	else
+		s->final <- e
+END OF FUNCTION
+

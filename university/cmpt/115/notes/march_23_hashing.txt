@@ -1,0 +1,30 @@
+( Seed )
+
+what is wrong with this idea
+    use student numbers as index of array
+
+- memory inefficient
+- if we don't have enough indexes 
+But very fast search
+
+Hash function - transforms a key to a unique key for an index of an array
+Hash-key for an index of an array
+
+Hash function is the identity function
+
+Folding
+- key is divided into parts
+123-456-789
+added these 3
+1368 
+and div by 1000
+368
+Note:  1 million SIN also get mapped at index using this folding method.
+
+There are lots of different ways to hash keys.
+
+Collision is almost garmented.
+We have to find some way to resolve this
+we can not just toss something out.
+
+skipping collisions have to be constant same with the hashing function and with one another ( otherwise we won't be able to find any collision ( doubles m ))

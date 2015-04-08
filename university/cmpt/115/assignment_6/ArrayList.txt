@@ -1,0 +1,29 @@
+mAlgorithm createList(size)
+Create a new list.
+Pre: size :: the capacity of the array
+Returns: a reference to a newly allocated list that is initialized 
+to be empty.
+
+  refToList rNewList <- allocate new List
+  rList*=>capacity <- size
+  rList*=>tail <- -1
+  rList*=>numElements <- 0
+  rList*=>elements <- allocate new Element[size]
+  return rNewList
+
+
+Algorithm InsertTail(rList, el)
+Pre: rList :: a reference to a list into which to insert
+     el :: an Element
+Post: el is inserted into the list
+Return: true if successful, false otherwise
+
+  if ( rList*=>numElements == rList*=>capacity )
+    return false // Special case when list is full
+  else
+    // put the new element in the position indexed by numElements
+    rList*=>elements[numElements] <- el
+    rList*=>numElements <- rList*=>numElements + 1
+    rList*=>tail <- rList*=>tail + 1
+  end if
+  return true

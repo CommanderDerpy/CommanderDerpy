@@ -1,0 +1,125 @@
+// file: a4e2.txt
+// design document for a test program
+// the testing in this design is quite extensive!  
+
+
+Algorithm copy(s)
+  Pre: s :: refToChar
+  Post:  memory allocated on heap to store a copy
+  Return: reference to new string
+
+
+Algorithm create_TestStudentRecord()
+  Post: creates a test student record
+  Return: the reference
+
+  testS <- createStudentRecord()
+  (*testS).firstName <- copy("Firstname")
+  (*testS).lastName <- copy("LASTNAME")
+  (*testS).studentNumber <- 12345678
+  (*testS).NSID <- copy("abc123")
+  For i from 0 to 9 do
+    (*testS).grades[i] <- 9*(i+1)  // increasing values for fun
+  done
+  (*testS).mtExam <- 66
+  (*testS).finalExam <- 88
+  return testS
+
+
+Algorithm TestStudentRecordOperations()
+  // does a lot of testing!
+  refToStudent testS <- NULL
+  Print "============================="
+  Print "Testing createStudentRecord()"
+  testS <- createStudentRecord()
+  if (testS == NULL) then 
+    print “Create student test failed.” 
+    return
+  Else 
+    print “Create student test succeeded.”
+
+  Print "============================="
+  Print "deallocating record"
+  destroyStudentRecord(testS)
+  Print "deallocation did not fail horribly."
+  // you can't really test deallocation without 
+  // looking into the memory manager, so that's 
+  // the best we can do
+
+  Print "============================="
+  Print "Testing displayStudentRecord()"
+  Print "1. Testing call with a null pointer"
+  displayStudentRecord (NULL)
+  Print "null pointer test passed"
+  Print "2. Testing call with hard coded data"
+  testS <- create_TestStudentRecord()
+  displayStudentRecord(testS)
+  Print "does everything look right?"
+  destroyStudentRecord(testS)
+
+  Print "============================="
+  Print "To test readStudentRecordFromConsole()"
+  Print "enter data for a student"
+  testS <- readStudentRecordFromConsole()
+  Print "and compare to what gets displayed."
+  displayStudentRecord(testS)
+  Print "does everything look right?"
+
+  destroyStudentRecord(testS)
+
+  Print "============================="
+  Print "Testing changeAssignmentGradeForStudent()"
+  Print "1. Testing call with a null pointer"
+  changeAssignmentGradeForStudent (NULL,0,10) 
+  Print "null pointer test passed"
+
+  Print "2. Testing call with hard coded data"
+  for a from 0 to 10 do
+    testS <- create_TestStudentRecord()
+    Print "testing changes to assignment grade at index ", a
+    integer before <- (*testS).grades[a]
+    changeAssignmentGradeForStudent(testS,a,before + 1) 
+    if ((*testS).grades[a] == before + 1) 
+      Print "test passed"
+    else
+      Print "test did not pass for some reason", before, (*testS).grades[3] 
+    destroyStudentRecord(testS)
+  done
+
+
+  Print "============================="
+  Print "Testing changeExamGradeForStudent()"
+  Print "1. Testing call with a null pointer"
+  changeAssignmentGradeForStudent (NULL,0,10) 
+  Print "null pointer test passed"
+  Print "2. Testing with hard coded data"
+  testS <- create_TestStudentRecord()
+  Print "testing changes to midterm grade"
+  before <- (*testS).mtExam
+  changeExamGradeForStudent(testS,'M',before + 1) 
+  if ((*testS).mtExam == before + 1) 
+    Print "test passed"
+  else
+    Print "test did not pass for some reason", before, (*testS).mtexam 
+
+  Print "testing changes to final exam grade"
+  before <- (*testS).finalExam
+  changeExamGradeForStudent(testS,'F',before + 1) 
+  if ((*testS).finalExam == before + 1) 
+    Print "test passed"
+  else
+    Print "test did not pass for some reason", before, (*testS).finalExam 
+
+
+  Print "testing nonsense command "
+  integer before2 <- (*testS).mtExam
+  before <- (*testS).finalExam
+  changeExamGradeForStudent(testS,'Q',-1) 
+  if ((*testS).finalExam == before && (*testS).mtExam == before2))
+    Print "test passed"
+  else
+    Print "test did not pass for some reason", (*testS).mtExam, (*testS).finalExam 
+
+  destroyStudentRecord(testS)
+
+  Print "Done testing!"

@@ -1,0 +1,92 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */MARD
+
+1) 
+    (a) "3 4 5 × +"
+    Stack : 3,20
+    Result : 23
+
+
+    "+" -- "x" -- "5"
+     \      \
+     3       4
+    (b) "3 4 + 5 ×"
+
+    Stack : 7,5
+    Result : 35
+
+    (c) "3 12 + 8 2 "+" × 7 ×"
+     Stack : 15,8,2
+     Result : 1050
+
+    (d) "2 2 2 2 2 2 + × × + +"
+    Stack : 2 2 2 8
+    Result : 20
+
+    (e) "2 2 2 + 2 × 2 + 2 × +"
+    Stack : 2 8 2
+    Result : 22
+
+2)
+
+"+" --  "*" --   5
+    \    \
+    \    \
+    3   4
+
+3)
+Using your knowledge of trees, stacks, post-fix expressions and expression trees, write an algorithm that takes an post-order expression, and creates an expression tree from it. Use the Tree ADT (e.g., insertLeft(), insertRight(), etc), to build the tree. Remember that empty trees are NULL. Also, assume that your tree nodes can store numbers or operators (say, as C-strings). Also, assume that you can look at a token and decide if it is a number or a token (as the above algorithm did). Also, you can break the expression into tokens as we did in the algorithm above.
+
+Function makeExpressionTree(refToChar)
+
+Pre: refToChar :: expression :: C-string in postfix notation (expecting a string of tokens so that for example 12 gets read as 12 and not as 1 and 2)
+Post: Creates a Expression Tree
+Return: refToTreeNode :: Root of the Expression Tree
+
+arr = [3, 12, +, 8, 2, +, *, 7, *]
+
+ “3 12 + 8 2 + * 7 *”
+
+Stack *s <- createStack();
+
+for i in arr
+//Creates a Tree and assigns it a value
+        TreeNode n <- createTreeNode(arr[i])
+//pushes the tree onto the stack
+        pushOntoStack(s, n);
+        char c <- n->data;
+//checks if the next char is an operator. If it is it creates a tree using the last two Trees on the stack
+        if (ch == '+' || ch == '-' || ch == '*' || ch == '/';) {
+        n = popFromStack(s)
+        insertRight(n, NULL)
+        insertLeft(n, NULL)
+        n->right <- popFromStack(s)
+        n->left <- popFromStack(s)
+        push(s, n)
+}
+return pop(s)
+
+
+***TESTING***
+
+arr = [3, 12, +, 8, 2, +, *, 7, *]
+
+For loop
+1st run : Stack : 3
+2nd run : Stack : 3,12
+3rd run : Stack : 3,12 + after if +
+    //combines the last 3
+4th run : Stack : +, 8
+5th run : Stack : +, 8, 2 after if + +
+    //combines the last 3
+6th run : Stack : +, +, * after if *
+    //combines the last 3
+7th run : Stack : *, 7
+8th run : Stack : *, 7, * after if *
+    //combines the last 3
+end for
+

@@ -1,0 +1,45 @@
+Linked lists 
+Time Complexities
+
+Just look at the slides
+
+Circular list
+    The end node points at the head
+HEAD -> [][]-> [][]-> [][]-> [][]-> [][ points at head ]
+going around in a circle
+    reftoNode <- NULL;
+    head <-CircularCreate(head,"A",head);
+<script type="C++"> 
+Alg circularInsert(rHead,el,headOfTheList) {
+//rhead :: head of a portion of the linked list
+//el :: data to be inserted
+//headOfTheList :: reftoNode, original head of the whole list
+if (rHead == NULL OR !(*rhead).next == headOfTheList) {
+    (*head).next <- allocate new node
+    (*head).data <- el
+    (*(*head*).next).next <- headOfTheList
+    return (*head)
+} else {
+    circularInsert((*head).next,el.,headOfTheList)
+    }
+return (*head)    
+}
+
+more correct way
+
+if (head == NULL) {
+    head <- allocate new node
+    (*head).next  <-head
+    (*head).data <- el
+    return(head) 
+} else if ((*head).next == headOfTheList) {
+    (*head).next <- allocate new node
+    (*head).data <- el
+    (*(*head*).next).next <- headOfTheList
+    return (*head)
+} else {
+    rhead <- circularInsert((*head).next,el,headOfTheList)
+    return (*head)
+}
+
+</script>

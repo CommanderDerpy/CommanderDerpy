@@ -1,0 +1,154 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+
+1) 
+    (a) "3 4 5 × +"
+    Stack : 3,20
+    Result : 23
+
+    (b) "3 4 + 5 ×"
+
+    Stack : 7,5
+    Result : 35
+
+    (c) "3 12 + 8 2 "+" × 7 ×"
+     Stack : 15,8,2
+     Result : 1050
+
+    (d) "2 2 2 2 2 2 + × × + +"
+    Stack : 2 2 2 8
+    Result : 20
+
+    (e) "2 2 2 + 2 × 2 + 2 × +"
+    Stack : 2 8 2
+    Result : 22
+
+2)
+    a)
+        "+" --  "*" --   5
+            \    \
+            \    \
+            3   4
+    b)
+        x -- + -- 4
+        \    \
+        5    3
+    c)
+        x -- x -- + -- 2
+        \    \     \
+              \     8
+        7     + --12
+               \
+                3
+    d)
+        + -- + -- x -- x -- + -- 2
+         \    \    \    \    \
+           2   2    2    2    2
+    e)
+         + -- x -- x -- + -- 2
+          \    \    \   \   
+            +   2   2   2 
+
+
+
+3. There are two solutions posted here. Both of which do the same thing. Although they both take different input. See below for code and example of input
+
+( For when the c-String is a set of Tokens ) eg. arr = [3, 12, +, 8, 2, +, *, 7, *]
+
+
+example : arr = [3, 12, +, 8, 2, +, *, 7, *]
+
+Function makeExpressionTree(refToChar)
+Pre: refToChar :: expression :: C-string in postfix notation
+Post: Creates a Expression Tree
+Return: refToTreeNode :: Root of the Expression Tree
+
+
+Stack *s <- createStack();
+
+for i in arr to strlen(expr)
+    //Creates a Tree and assigns it a value
+    TreeNode n <- createTreeNode(arr[i])
+    
+//pushes the tree onto the stack
+    pushOntoStack(s, n);
+
+    char c <- n->data;
+    //checks if the next char is an operator. If it is it creates a tree using the last two Trees on the stack
+    if (ch == '+' || ch == '-' || ch == '*' || ch == '/';) {
+n = popFromStack(s)
+insertRight(n, NULL)
+insertLeft(n, NULL)
+        n->right <- popFromStack(s)
+        n->left <- popFromStack(s)
+        push(s, n)
+    }
+return pop(s)
+
+
+
+
+***TESTING***
+
+arr = [3, 12, +, 8, 2, +, *, 7, *]
+
+For loop
+1st run : Stack : 3
+2nd run : Stack : 3,12
+3rd run : Stack : 3,12 + after if +
+    //combines the last 3
+4th run : Stack : +, 8
+5th run : Stack : +, 8, 2 after if + +
+    //combines the last 3
+6th run : Stack : +, +, * after if *
+    //combines the last 3
+7th run : Stack : *, 7
+8th run : Stack : *, 7, * after if *
+    //combines the last 3
+end for
+
+
+( For when the c-String a continuous string ) eg. arr = [“3 12 + 8 2 + * 7 *”]
+
+Function makeExpressionTree(refToChar)
+
+Pre: refToChar :: expr :: C-string in postfix notation
+Post: Creates a Expression Tree
+Return: refToTreeNode :: Root of the Expression Tree
+
+char buffer[10]
+buffer[0] <- '\n'
+int bufferPos <- 0;
+
+Stack *s <- createStack()
+
+buffer = “\0”
+bufferPos = 0
+
+for i from 0 to strlen(expr)
+    char c = expr[i];
+    if ((c >= '0' && c <= '9')) {
+        buffer[bufferPos] <- c
+        bufferPos++
+        buffer[bufferPos] <- '\0'
+    } else if (c == ' ' || c == '+' || c == '-' || c == '*' || c == '/')
+     if(bufferPos != 0) {
+        TreeNode *n <- createTreeNode(buffer)
+        pushOntoStack(n)
+        buffer[0] <- '\0'
+        bufferPos <- 0
+     }
+    
+     if (c != ' ') {
+        TreeNode *n <- createTreeNode(c)
+        insertRight(n, popFromStack(s))
+        insertLeft(n, popFromStack(s))
+
+        pushOntoStack(n)
+    }
+}
+

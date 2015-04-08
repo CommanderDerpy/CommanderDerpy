@@ -1,0 +1,18 @@
+Trees
+
+Breadth First traversal
+- From top to bottom
+- 1,2,3,4,5,6,7,8
+top then one down
+left then right
+one down to the left
+etc...
+or Root down (siblings before children)
+- we can not do this without using Queue
+
+maybe in the assignment - page 76
+Order of operations
+
+Binary search tree (is different) always in order
+
+

@@ -1,0 +1,116 @@
+max@MaxLaptop ~/university/cmpt/115/assignment_5/handin $ g++ -pedantic -Wall -o testStudent testStudent.cc student.cc
+max@MaxLaptop ~/university/cmpt/115/assignment_5/handin $ ./testStudent 
+=============================
+Testing createStudentRecord()
+Create student test succeeded.
+=============================
+deallocating record
+deallocation did not fail horribly.
+=============================
+Testing displayStudentRecord()
+1. Testing call with a null pointer
+null pointer test passecout
+2  Testing call with hard coded data
+first name: Firstname
+last name: LASTNAME
+Student number: 12345678
+NSID: abc123
+Student grade: 1 = 9
+Student grade: 2 = 18
+Student grade: 3 = 27
+Student grade: 4 = 36
+Student grade: 5 = 45
+Student grade: 6 = 54
+Student grade: 7 = 63
+Student grade: 8 = 72
+Student grade: 9 = 81
+Grade for Final: 0
+Grade for Midterm: 0
+does everything look right?
+=============================
+To test readStudentRecordFromConsole()
+enter data for a student
+creating a new student record:
+Enter Student's First Name: Max
+Enter Student's Last Name: Gewers
+Enter Student number: 1545654654           
+Enter Student NSID (Format ABC123 / XXX###: ABC999
+Enter Student grade for assignment : 1
+100
+Enter Student grade for assignment : 2
+100
+Enter Student grade for assignment : 3
+95
+Enter Student grade for assignment : 4
+98
+Enter Student grade for assignment : 5
+65
+Enter Student grade for assignment : 6
+100
+Enter Student grade for assignment : 7
+87
+Enter Student grade for assignment : 8
+56
+Enter Student grade for assignment : 9
+98
+Enter Student grade for assignment : 10
+98
+and compare to what gets displayed.
+first name: Max
+last name: Gewers
+Student number: 1545654654
+NSID: ABC999
+Student grade: 1 = 100
+Student grade: 2 = 100
+Student grade: 3 = 95
+Student grade: 4 = 98
+Student grade: 5 = 65
+Student grade: 6 = 100
+Student grade: 7 = 87
+Student grade: 8 = 56
+Student grade: 9 = 98
+Grade for Final: 0
+Grade for Midterm: 0
+does everything look right?
+=============================
+Testing changeAssignmentGradeForStudent()
+1. Testing call with a null pointer
+null pointer test passed
+2. Testing call with hard coded data
+testing changes to assignment grade at index 0
+test passed
+testing changes to assignment grade at index 1
+test passed
+testing changes to assignment grade at index 2
+test passed
+testing changes to assignment grade at index 3
+test passed
+testing changes to assignment grade at index 4
+test passed
+testing changes to assignment grade at index 5
+test passed
+testing changes to assignment grade at index 6
+test passed
+testing changes to assignment grade at index 7
+test passed
+testing changes to assignment grade at index 8
+test passed
+testing changes to assignment grade at index 9
+test passed
+=============================
+Testing changeExamGradeForStudent()
+1. Testing call with a null pointer
+null pointer test passed
+2. Testing with hard coded data
+testing changes to midterm grade
+test passed
+testing changes to final exam grade
+test passed
+testing nonsense command 
+test passed
+Done testing!
+
+
+
+We are done here...
+max@MaxLaptop ~/university/cmpt/115/assignment_5/handin $ 

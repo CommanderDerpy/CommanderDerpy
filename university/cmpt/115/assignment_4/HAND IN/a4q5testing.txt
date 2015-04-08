@@ -1,0 +1,48 @@
+/* 
+* Maximilian Gewers 
+* 11163599
+* CMPT - 115 - 02
+* CMPT - 115 - T08
+*/
+
+
+First test
+	max@MaxLaptop ~/university/cmpt/115/Asignment_4/HAND IN $ make a4q5 && ./a4q5 < database.txt 
+	g++     a4q5.cpp   -o a4q5
+	Brodynew
+	75
+
+
+
+	We are done here...
+
+Second Test
+	make: `a4q5' is up to date.
+	Connor
+	82
+
+
+
+	We are done here...
+	max@MaxLaptop ~/university/cmpt/115/Asignment_4/HAND IN $
+
+Third Test
+	g++     a4q5.cpp   -o a4q5
+	Aaron
+	73
+
+
+
+	We are done here...
+	max@MaxLaptop ~/university/cmpt/115/Asignment_4/HAND IN $ 
+
+Last test
+	g++     a4q5.cpp   -o a4q5
+	Jacob
+	69
+
+
+
+	We are done here...
+	max@MaxLaptop ~/university/cmpt/115/Asignment_4/HAND IN $ 
+

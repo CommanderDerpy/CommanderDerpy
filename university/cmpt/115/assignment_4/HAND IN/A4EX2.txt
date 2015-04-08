@@ -1,0 +1,33 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+
+IN MAIN!!!!!! working
+
+	Student RefToS1 <- (call) readStudentRecordFromConsole()
+	displayStudentRecord(s1) 
+	changeAssignmentGradeForStudent(s1,1,100)
+	changeExamGradeForStudent(s1,m,99)
+	displayStudentRecord(s1)
+	destroyStudentRecord()
+
+	return 0
+END OF MAIN
+
+
+!!!!!!!!!!!!!!!!!! OR !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+IN MAIN!!!!!! not working
+
+	Student RefToS1 <- (call) readStudentRecordFromConsole()
+	changeAssignmentGradeForStudent(s1,1,100)
+	changeExamGradeForStudent(s1,m,99)
+	destroyStudentRecord()
+	displayStudentRecord(s1)
+
+	return 0
+END OF MAIN

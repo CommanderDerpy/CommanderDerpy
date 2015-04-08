@@ -1,0 +1,57 @@
+Data strcuture and the operations
+A list is a very tree
+
+storing a tree (see slides for exact tree)
+
+Sudo :
+struct {
+    int data
+    refToTree left
+    refToTree right
+}
+
+Main root = 
+refToTree mainRoot = NULL
+
+insert in tree
+
+(*mainRoot).data <- 2
+(*mainRoot).left <- NULL
+(*mainRoot).right <- NULL
+
+
+RefToTreer r1, r2, r3
+    r1 allocate new Tree
+    r2 allocate new Tree
+    r3 allocate new Tree
+(root)
+(*r1).data -> 5
+(*r1).left  -> r2 (points at below)
+(*r1).right -> NULL
+(leaf)
+(*r2).data -> 4
+(*r2).left -> NULL
+(*r2).right -> NULL
+
+Use 2 diff function to insert left and insert right ( better coding )
+
+Traversals in trees
+
+Allways traversal from the root
+3 main ways to traversal a tree
+- 1 in order   
+    + Traversal left
+    + output root
+    + traversal right
+- 2 pre order
+    + out put tree fist
+    + traverse left
+    + traversal right
+- 3 post order
+    + traversal left
+    + traversal right
+    + output root
+
+See code.
+
+read first traversal sounds the easiest to visualize.

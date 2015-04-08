@@ -1,0 +1,36 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+ 
+testing createList
+createList succeeded
+testing destroyList
+testing destroyList succeeded
+testing emptyList with an empty list
+testing lengthList with an empty list
+inserting an element at the tail of the list
+inserting a second element at the tail of the list
+deleting the tail of the list (going from 2 to 1 elements in the list)
+deleting the tail of the list (going from 1 to 0 elements in the list)
+inserting 10 elements
+deleting 10 elements
+should print the words ten nine eight ... one
+ten
+nine
+eight
+seven
+six
+five
+four
+three
+two
+one
+Testing growList Function
+Returns True if sucess false otherwise
+Test 1 sucess
+Test 2 sucess
+Testing list operations complete!
+Testing complete!

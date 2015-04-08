@@ -1,0 +1,62 @@
+/* 
+ * Maximilian Gewers 
+ * 11163599
+ * CMPT - 115 - 02
+ * CMPT - 115 - T08
+ */
+
+Start of testing!!
+testing collatz function:
+PASSED: collatz value for input 1 is correct
+PASSED: collatz value for input 2 is correct
+PASSED: collatz value for input 5 is correct
+PASSED: collatz value for input 27 is correct
+
+testing removeOdds:
+testing with an empty sequence:
+full sequence of nodes: (there should be 0 nodes)
+now with odds removed: (there should be 0 nodes)
+testing with a sequence of all odd numbers:
+full sequence of nodes:
+1
+3
+5
+7
+now with odds removed: (all values should be removed)
+testing with a sequence of all even numbers:
+full sequence of nodes:
+2
+8
+4
+12
+6
+now with odds removed: (the sequence should be unchanged)
+2
+8
+4
+12
+6
+testing with a sequence of mixed even/odd numbers:
+full sequence of nodes:
+2
+7
+5
+32
+40
+1
+now with odds removed: (only the even values should remain)
+2
+32
+40
+
+testing findAndReplace
+first phrase: 
+I can't let you do that Dave
+after replacing all occurrences of 't' with 'x':
+I can'x lex you do xhax Dave
+second phrase: 
+I Love Recursion!
+after replacing all occurrences of 'q' with 'u' (no change expected):
+I Love Recursion!
+testing complete!
+max@MaxLaptop ~/university/cmpt/115/assignment_6/handin $ 

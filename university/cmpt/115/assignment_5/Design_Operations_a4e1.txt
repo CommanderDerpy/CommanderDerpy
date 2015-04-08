@@ -1,0 +1,220 @@
+
+// file: a4e1.txt
+// Design document 
+// Two parts: 
+//    1.  Interface
+//    2.  Implementatation
+
+
+==================
+# 1. Interface:
+
+Algorithm createStudentRecord()
+  Pre: none
+  Post: none
+  Returns: refToStudent, a valid reference to Student c/w all
+           internal references allocated
+
+
+Algorithm destroyStudentRecord(s)
+  Pre: s :: refToStudent, a valid Student record reference 
+  Post: s :: refToStudent, deallocated
+  Returns: nothing
+
+
+Algorithm displayStudentRecord(s)
+  Pre: s :: refToStudent, a valid Student record reference 
+  Post: All data held in s is displayed on the console screen 
+  Returns: nothing
+
+
+Algorithm readStudentRecordFromConsole()
+  Pre: none
+  Post: data for a valid Student record has been read from the input console 
+  Returns: reference to the newly created student record
+
+
+Algorithm changeAssignmentGradeForStudent(s,a,g)
+  Pre: s :: refToStudent is a valid reference to a student record;
+  a :: integer between 0 and 9;
+  g :: float, a valid grade change amount (negative or positive)
+  Post: The grade for the assignment of the student record has been adjusted by the amount. 
+  Returns: nothing.
+
+
+Algorithm changeExamGradeForStudent(s,x,e)
+  Pre: s :: refToStudent, a valid reference to a student record;
+       x :: character, is either ‘M’ or ‘F’;
+       e :: float, is a valid exam grade change amount (negative or positive)
+  Post: The grade for the exam of the student record has been adjusted by the amount. 
+  Returns: nothing.
+
+
+==================
+# 2. Implementation:
+
+  Student
+    refToCharacter firstName  // string
+    refToCharacter lastName   // string
+    integer studentNumber 
+    refToCharacter NSID       // string format aaannn
+    refToFloat grades         // array
+    float mtExam              // midterm exam grade
+    float finalExam           // final exam grade
+    integer finalGrade // final grade
+    character finalLetterGrade // final grade in letter form
+  end Student
+
+
+Algorithm createStudentRecord()
+  Pre: none
+  Post: none
+  Returns: refToStudent, a valid reference to Student c/w all internal references allocated
+
+  refToStudent sr <- allocate new Student 
+  (*sr).NSID <- allocate new refToChar[6] 
+  (*sr).grades <- allocate new refToFloat[10] 
+  Return sr
+
+
+Algorithm destroyStudentRecord(s)
+  Pre: s :: refToStudent, a valid Student record reference 
+  Post: s :: refToStudent, deallocated
+  Returns: nothing
+
+
+  if (s==NULL) { 
+    return
+  }
+  if ((*s).firstName != NULL) {
+    deallocate [] (*s).firstName 
+  }
+  if ((*s).lastName != NULL) { 
+    deallocate [] (*s).lastName
+  }
+  if ((*s).NSID != NULL) {
+    deallocate [] (*s).NSID 
+  }
+  if ((*s).grades != NULL) { 
+    deallocate [] (*s).grades
+  }
+  if ((*s).finalGrades != NULL) { 
+    deallocate [] (*s).finalGrades
+  }
+  if ((*s).finalLetterGrades != NULL) { 
+    deallocate [] (*s).finalLetterGrades
+  }
+  deallocate s
+
+
+Algorithm displayStudentRecord(s)
+  Pre: s :: refToStudent, a valid Student record reference 
+  Post: All data held in s is displayed on the console screen 
+  Returns: nothing
+  if (s==NULL) { 
+    return
+  }
+  Print "first name: ", (*s).firstName
+  Print "last name: ", (*s).lastName
+  Print "Student number: ", (*s).studentNumber 
+  Print "NSID: ", (*s).NSID
+  For i from 0 to 9 do
+    Print “Student grade: “ i “ = ” (s*).grades[i] 
+  Done
+  Print “Midterm exam grade: “ (s*).mtExam 
+  Print “Final exam grade: “ (s*).finalExam
+
+
+Algorithm readStudentRecordFromConsole()
+  Pre: none
+  Post: data for a valid Student record has been read from the input console 
+  Returns: reference to the newly created student record
+  
+  Print "creating a new student record:"
+  s <- createStudentRecord()
+  Print "first name: "
+  (*s).firstName <- readAndCopyCString() // used from previous assignment 
+
+  Print "last name: "
+  (*s).lastName <- readAndCopyCString()
+
+  Print " Student number: "
+  read (*s).studentNumber // integer read directly
+
+  (*s).NSID <- readAndCopyCString() // could now check if length entered was only 6 characters
+  For i from 0 to 9 do
+    Print “Student grade: “ i
+    read (s*).grades[i] 
+  done
+  read (s*).mtExam 
+  read (s*).finalExam 
+  return s
+ 
+
+Algorithm changeAssignmentGradeForStudent(s,a,g)
+  Pre: s :: refToStudent is a valid reference to a student record;
+       a :: integer between 0 and 9;
+       g :: float, a valid grade change amount (negative or positive)
+  Post: The grade for the assignment of the student record has been adjusted by the amount. 
+  Returns: nothing.
+
+  if (s==NULL) {
+    return 
+  }
+  if (((*s).a < 0) || ((*s).a > 9)) { 
+    return
+  }
+  (*s).grades[a] <- (*s).grades[a] + g
+
+
+Algorithm changeExamGradeForStudent(s,x,e)
+  Pre: s :: refToStudent, a valid reference to a student record;
+  x :: character, is either ‘M’ or ‘F’;
+  e :: float, is a valid exam grade change amount (negative or positive)
+  Post: The grade for the exam of the student record has been adjusted by the amount. 
+  Returns: nothing.
+
+  if (s==NULL) {
+    return 
+  }
+  if(x==‘M’) {
+    (*s).mtExam <- (*s).mtExam + e
+  }
+  else if (x == ‘F’) {
+    (*s).finalExam <- (*s).finalExam + e 
+  }
+
+
+Algorithm calculateFinalGrade(s)
+  Pre: s :: refToStudent, a valid reference to a student record.
+  Post: finalGrade and finalLetterGrade have been set.
+  Return: nothing.
+
+tempGrade <- (*s).finalExam * 0.4
+tempGrade <- tempGrade + ( (*s).mtExam * 0.3 )
+for c from 0 to 9 do
+  tempGrade <- tempGrade + ( (*s).grades[c] * 0.03 )
+end for
+(*s).finalGrade <- tempGrade
+if tempGrade >= 50 {
+  (*s).finalLetterGrade <- 'F'
+else if tempGrad >= 59 and tempGrade <= 50
+  (*s).finalLetterGrade <- 'D'
+else if tempGrad >= 69 and tempGrade <= 60
+  (*s).finalLetterGrade <- 'C'
+else if tempGrad >= 79 and tempGrade <= 70
+  (*s).finalLetterGrade <- 'B'
+else if tempGrad >= 100 and tempGrade <= 100
+  (*s).finalLetterGrade <- 'A'
+end if
+
+
+Algorithm displayFinalGrade(s)
+  Pre: s :: refToStudent, a valid reference to a student record.
+  Post: name and final grade data help in s is displayed.
+  Return: nothing.
+
+  Print  (*s).firstName (*s).lastName "Has the final Grade of : " (*s).finalGrade, "Which is a : " (*s).finalLetterGrade. 
+ 
+
+

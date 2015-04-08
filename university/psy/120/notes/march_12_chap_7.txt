@@ -1,0 +1,104 @@
+GOING to be on the final ( read book )
+
+Unconditional Stimulus
+- Any stimulus that naturally elicits a behavior
+- Dogs starting to drool when they see food.
+
+Neutral Stimulus
+- Has no connection to anything
+- with associated with an Unconditional Stimulus can become a conditioned stimulus.
+
+Conditioned Stimulus 
+- A neutral Stimulus that is able to elicits
+
+SEE SLIDES FOR EXPLANATION
+
+
+Acquisition 
+- The process of making the connection.
+- Timing is the key - they have to be close enough to make a connection
+    Trace conditioning
+    - CS is turned off before UCS is presented
+    Delay
+    - 
+    Simultaneous
+    - 
+    Backwards
+    -
+
+Extinction
+- The weakening with the CR as a result of absence of CS and UCS
+Spontaneous recovery
+- The sudden reappearance of the CR after the rest period without further exposure to the UCS
+- saving
+
+2 other related issues
+Stimulus Generalization
+- Automatic extension of conditioned responses to stimuli that are similar to the CS
+- The more similar the CS (original ) the stronger the responses
+Stimulus Discrimination
+- Learning to respond differently to stimuli that differ from the CS on some dimension
+
+Emotional Response and fear conditions
+- Horror movie
+-  Little Albert (link)
+Preference
+- Food likes / dislike, advertising
+Drug use and addiction
+- Siegel's research indication the setting for drug use becomes conditions with bodily responses
+
+Operant Condition
+(one step away - also about learning)
+
+Thorndike observed cats trying to escape a puzzle box.
+out side was food
+they would just run around the box until they hit a leaver and the door opened
+they learned it by escaping once.
+
+Law of effort
+- A response followers by satisfying consequences become more probable than a response followed bu dissatisfying consequences
+
+
+Rats performing behavior followed b positive and negative consequences.
+
+Reinforcement Contingency
+- if you get something after achieving something ( contingent )
+
+Reinforcer
+- increases the prob. of a respond
+- increases an behavior
+
+Positive Reinforcer
+-
+
+Negative Reinforcer
+- Behavior that makes followed by the removal of an aversive stimuli (increases behavior)
+- Escape conditioning - responses allows escape from aversive stimuli
+    + for example car noise ( light on)
+- Avoidance conditioning - response allows avoidance of aversive stimuli before it begins
+
+Punisher 
+- Stimuli that, when made contingent on a response, decreases the probability of that response.
+- decrease an behavior
+Positive punisher
+-  not working well
+negative punisher
+- something is taken away to remove some behavior
+
+Primary reinforcer
+- Handful of these exist at birth - reinforcing properties were biologically determining (food, water)
+
+Conditional (secondary) Reinforcer
+-
+
+Primary Punisher
+-
+
+Conditional (secondary) Punisher
+-
+
+Look at the graph sound in the sidles (page 30)
+
+Discriminative Stimuli
+- Stimuli that precede at particular responses (reinforcement or punishment) and come to set the context that behavior
+- Referred  to as the three-term contingency (discriminative)

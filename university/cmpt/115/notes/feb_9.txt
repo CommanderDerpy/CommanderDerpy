@@ -1,0 +1,91 @@
+#CMPT 115
+
+List slides
+Page 41
+
+RefToNode Head
+    Head <- Null - then the list is empty - head can point to anything a another list or an array etc.
+
+listCount (rList)
+Pre: rList :: refToNode
+Post: Nothing changes
+Return: 0 if list is empty / NULL or n number of nodes in the list
+
+
+MUCH EASIER!!!! Makes a lot more sense.
+<script type="c++">
+if (rList == NULL) {
+    Return 0
+    } else {
+        return (1 + listCount(rList).next)
+    }
+}
+</script>
+Or we can use a non recursion version which is not as easy (More code)
+
+<script type="c++">
+if (rList == NULL) {
+    return 0;
+}
+temp = (rList).next;
+cnt = 0
+while (temp == NULL) {
+    cnt = cnt + 1;
+    temp = (rList).next)
+}
+return cnt;
+</script>
+
+Destroy a List
+
+alg: destroyList(rList)
+Pre: rList :: RefToNode.
+Post: Destroys the list, all nodes deallocated, Head == NULL.
+Return: NULL
+<script type="c++">
+if (rList == NULL) {
+    return NULL;
+} 
+//delete rest of list first
+destroyList(rList.next)
+dealocate rList
+return (Null)
+</script>
+
+HEAD- > [ ][ ] - > [ ][ ] - > [ ][ /] 
+It goes though the entire list before deallocates anything ()
+HEAD- > [X ][ ] - > [ ][ ] - > [ ][ /] 
+HEAD- > [ ][ ] - > [X ][ ] - > [ ][ /] 
+HEAD- > [ ][ ] - > [ ][ ] - > [X ][ /] 
+And then *deletes them each* from the fail to the head and assigns *NULL* to head
+HEAD- > [ ][ ] - > [ ][ ] - > 
+HEAD- > [ ][ ] - >
+HEAD- > NULL 
+DONE
+
+
+PAGE 47
+In class EX)
+
+Solve using recursion
+
+alg : searchList
+pre : rList : redToNode
+        target :: element which we are looking for
+post : Nothing
+return : true if found and false if not
+
+searchList(rList, target)
+<script type="c++">
+if (rList == NULL) {
+    return (false)
+} 
+if ((*rList).data == target) then return (true)
+return (searchList(*rList).next, target)
+</script> 
+
+Same as above - it goes though the entire list and find the target or not and then returns the outcome though each element back to the beginning which return it to the original call
+
+
+
+

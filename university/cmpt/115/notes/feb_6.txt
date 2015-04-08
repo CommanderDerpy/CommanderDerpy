@@ -1,0 +1,90 @@
+Read through slides about ATD using arrays. 
+They will be on the test
+
+List slides
+page 44
+
+Works so well with recursion
+
+
+Idea - recursion
+
+rList points to the head
+
+	int counter = 0;
+	if (rList == null) {
+		then return (0) //because there arent any others
+	} 
+	else {
+		return 1 + this function dereferenced KEY! (*rList.next) (recursion)
+	}
+
+(inclass testing for instruction)
+- input head works if head is null (end)
+- input head works of head is not null (end)
+
+Works!
+
+Same thing using loops
+
+
+	int counter = 0;
+	if (rList == null) {
+		then return (0) //because there arent any others
+	} 
+	count = 0
+	while ((*rList.next).next != NULL) {
+		count = count + 1
+		rList = (*rList).next
+	}
+		Same thing
+	rList is a copy of a reference. so if we change itm it wont change the original at all.
+
+
+DESTROYING A LIST Page.46
+after we pick up a pointer we deallocate the note
+Example:
+
+destroyList(rList) // by calling the head again (beginning)
+	
+	if (rList == Null) {
+		return
+	}	
+	rTemp = rlist
+	while (rTemp != NULL) {
+		rlist <- (*rTemp).next
+		delete rtemp
+		rTemp = rlist
+	}
+	return
+
+
+Search Page.47
+recursion
+
+Usualy Bool type
+searchList(rlist,target)
+	
+	if (rList == NULL) {
+		return False
+	}
+	if ((*rList).element == target) {
+		return True
+	} else {
+		return (searchList((*rList).Next,target)
+	}
+Works reallu nicely
+
+insert in the head
+InsertHead(rList,el)
+	have to make sure to return the right thing and not change the copy..
+	stack variable vs heap variable.
+
+Insert in the tail
+inseart(rList,el)
+
+HEAD -> [el][next] -> [el][next] -> [el][next] -> [el][\]
+we need to find the next that points to null update it to the new element 
+HEAD -> [el][next] -> [el][next] -> [el][next] -> [el][here!!] -> [newel][]
+and then make the new tail point to null
+HEAD -> [el][next] -> [el][next] -> [el][next] -> [el][here!!] -> [newel][/]

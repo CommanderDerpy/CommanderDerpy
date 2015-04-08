@@ -1,0 +1,17 @@
+Deletion of trees
+- added findDepth function
+- Updated the files we got on moodle
+- Look at the delete function
+
+
+Application of Binary trees.
+- Compression of text
+- Huffman coding - creating a tree
+Step 1 - Create a list of trees, one fro each character
+Step 2 - Find the two trees with the smallest freq.
+    - Join those two trees ( adding their freq values), and put the result back in the list
+    - Repeat that and with the smallest 2 freq and build slightly larger trees
+    - When ties, make arbitrary choice
+    - When only one tree left you are done.
+
+Binary tree 

@@ -1,0 +1,8 @@
+Vertext = 
+Path = 
+Walk = 
+edge = 
+
+from start to end
+visit all nodes
+two nodes connected ?

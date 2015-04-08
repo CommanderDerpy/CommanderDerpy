@@ -1,0 +1,16 @@
+#Data types using Object oriented code
+
+this is a reference to the current object
+- this->whatever
+
+UML
+
+programs which we can use to graphically create classes. It then generates the code for us to use ( skeleton class )
+
+
+Dictionary 
+Methods : function inside a object/class
+attributes : atomic data inside a object/class
+
+etc :
+
