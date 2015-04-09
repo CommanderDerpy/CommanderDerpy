@@ -34,8 +34,8 @@ theMaze::theMaze(bool foo) {
 		}
 	}
 
-	maze[0][3] = 'S';
-	maze[19][16] = 'E';
+	maze[3][0] = 'S';
+	maze[16][19] = 'E';
 	if (debug == true) {
 		cout << "DEBUG:    Maze constructor end" << endl;
 	}
@@ -101,7 +101,7 @@ void theMaze::drawMaze() {
 		cout << "|  ";
 		for (int c = 0; c < 20; ++c) {
 
-			cout << maze[c][i] << " ";
+			cout << maze[i][c] << " ";
 
 		}
 		cout << "  |"<< endl;
